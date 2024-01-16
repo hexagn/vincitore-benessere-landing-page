@@ -253,3 +253,11 @@ body {
     font-size: 8px;
     margin-bottom: 30px;
 }
+
+.rightLeaf {
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    height: 130px;
+    width: auto;
+}
