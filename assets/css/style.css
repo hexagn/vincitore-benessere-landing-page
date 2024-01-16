@@ -120,14 +120,14 @@ body {
 }
 
 .text-username {
-    font-size: 10px;
+    font-size: 8px;
     text-transform: uppercase;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 5px;
 }
 
 .text-date {
-    font-size: 10px;
+    font-size: 8px;
     text-transform: uppercase;
     margin-bottom: 5px;
 }
@@ -150,4 +150,106 @@ body {
 
 .bold {
     font-weight: bold;
+}
+
+.supportDiv {
+    position: absolute;
+    bottom: 5px;
+    left: 25%;
+    right: 25%;
+    padding: 4px 10px;
+    height: 30px;
+    background: rgb(159, 129, 57);
+    background: linear-gradient(90deg, rgba(159, 129, 57, 1) 0%, rgba(232, 209, 127, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.supportDiv p {
+    color: black;
+    font-size: 12px;
+    margin: 0;
+}
+
+.text-planned {
+    color: #89ab85;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.text-for-you {
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.text-for-you span {
+    font-size: 70px;
+    font-family: Nautica;
+    text-transform: uppercase;
+}
+
+.section {
+    padding: 10px;
+}
+
+.rectangle {
+    display: flex;
+    align-items: center;
+    background: rgb(63, 105, 31);
+    background: linear-gradient(90deg, rgba(63, 105, 31, 1) 0%, rgba(31, 52, 28, 1) 100%);
+    border-radius: 40px;
+    padding: 14px;
+    position: relative;
+    margin-bottom: 50px;
+    min-height: 138px;
+}
+
+.icon {
+    width: auto;
+    height: 160px;
+    object-fit: cover;
+    position: absolute;
+    left: -12px;
+}
+
+.iconRight {
+    width: auto;
+    height: 150px;
+    object-fit: cover;
+    position: absolute;
+    right: -12px;
+}
+
+.rectangle .textContainer {
+    margin-left: 45%;
+}
+
+.rectangle .textContainerRight {
+    margin-right: 43%;
+    padding-left: 12px;
+}
+
+.rectangle h1 {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 90%;
+}
+
+.rectangle p {
+    color: white;
+    font-size: 8px;
+    margin: 0;
+}
+
+.copyright {
+    text-align: center;
+    color: #717171;
+    font-size: 8px;
+    margin-bottom: 30px;
 }
