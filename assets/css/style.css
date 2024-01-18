@@ -326,6 +326,13 @@ img.leaves2 {
     z-index: 2;
 }
 
+.second_sec .esser {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 20%;
+    z-index: -1;
+}
 .third_sec {
     background: #fff;
     border-radius: 40px;
@@ -407,8 +414,8 @@ img.leaves1 {
 }
 
 .sixth_sec .card .row {
-    margin-top: 20px;
-    /* margin-top: 45px; */
+    /* margin-top: 20px; */
+    margin-top: 45px;
     align-items: center;
 }
 
@@ -537,12 +544,14 @@ select.user_type {
     outline: none;
     color: #d0d0d0;
     background: transparent;
-    border-right: 1px solid #000000ba;
+    border-right: 1px solid #00000045;
+    font-weight: 500;
 }
 
 input.name {
     padding-left: 10px;
     background: transparent;
+    overflow: hidden;
 }
 
 input.input_field::placeholder,
@@ -552,7 +561,9 @@ input.input_field::placeholder,
     text-align: center;
     text-transform: uppercase;
 }
-
+input.name::placeholder{
+    text-align: left;
+}
 select.input_field option:first {
     font-weight: 500;
     color: #d0d0d0;
@@ -565,8 +576,9 @@ select.input_field option:first {
 
 .iti--separate-dial-code .iti__selected-flag {
     background: transparent !important;
-    border-right: 1px solid #00000091;
+    border-right: 1px solid #00000045;
     color: #d0d0d0;
+    font-weight: 500;
 }
 
 .form_para {
@@ -616,7 +628,10 @@ button.accordion-button {
 .accordion-button::after {
     background-image: url(../images/landing_page/arrow1.png);
 }
+.accordion-button:not(.collapsed)::after{
+    background-image: url(../images/landing_page/arrow1.png);
 
+}
 /* .submit_div{
     background: url(../images/landing_page/btn_bg.png);
     width: 100%;
