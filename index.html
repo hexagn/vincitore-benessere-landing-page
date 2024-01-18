@@ -67,9 +67,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="supportDiv">
+
+                    <div id="modalContainer"></div>
+                    <div class="supportDiv" id="openModal">
                         <p>Tap for support & details</p>
                     </div>
+
                 </div>
                 <div class="col-sm-12 text-center">
                     <div class="text my-5">
@@ -111,7 +114,83 @@
                     <p class="copyright">© 2022 Vincitore Realty LLC All rights reserved</p>
                 </div>
             </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade support_detail_popup" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true" >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="container-fluid popup">
+                        <div class="row popup_row">
+                            <!-- Top Section -->
+                            <div class="col-sm-12 text-center position-relative p_top">
+                                <img class="top" src="assets/images/popup/top.webp" alt="">
+                            </div>
+                            <!-- Middle Section -->
+                            <div class="col-sm-12 text-center position-relative p_middle">
+                                <div class="rsvp_btn">
+                                    <p>
+                                        RSVP Confirmation Details
+                                    </p>
+                                </div>
+                                <h3 class="benessere_title">Benessere</h3>
+                                <p class="m_ticket">M-Ticket</p>
+                                <img class="qr_code" src="assets/images/popup/qr.webp" alt="">
+                                <div class="qr_content">
+                                    <p>RSVP ID: <span>su8092p</span><br>
+                                        SUN, 15 MAR, 2024 | 8:00PM</p>
+                                </div>
+                                <p class="white_patch">Holistic wellness • health • happiness</p>
+                                <div class="contact_div">
+                                    <div class="border_btm">
+                                        <p>Contact</p>
+                                        <img class="support" src="assets/images/popup/support.webp" alt="">
+                                        <p>Support</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bottom Section -->
+                            <div class="col-sm-12 text-center position-relative p_bottom">
+                                <div class="guest_div">
+                                    <div class="guest">
+                                        <p>Guest-1</p>
+                                        <p>Dinesh Parekh</p>
+                                    </div>
+                                    <div class="guest">
+                                        <p>Guest-2</p>
+                                        <p>Ramesh Shaha</p>
+                                    </div>
+                                    <div class="guest">
+                                        <p>Guest-3</p>
+                                        <p>Dhiren Patel</p>
+                                    </div>
+                                    <div class="guest">
+                                        <p>Guest-4</p>
+                                        <p>Ramniklal Patel</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <!-- Add this script to your HTML -->
+        <script>
+            $(document).ready(function () {
+                $("#openModal").click(function () {
+                    $("#myModal").modal("show");
+                });
+            });
+        </script>
+
+
+
     </main>
+
 </body>
 
 </html>

@@ -333,6 +333,7 @@ img.leaves2 {
     top: 20%;
     z-index: -1;
 }
+
 .third_sec {
     background: #fff;
     border-radius: 40px;
@@ -442,6 +443,7 @@ img.card_icon {
 
 .floating_title h2 {
     font-size: 20px;
+    margin-bottom: 0;
     font-weight: 600;
 }
 
@@ -510,7 +512,8 @@ img.downarrow {
     background: #fff;
     display: flex;
 }
-.input_group.first{
+
+.input_group.first {
     padding: 0 10px;
 }
 
@@ -561,9 +564,11 @@ input.input_field::placeholder,
     text-align: center;
     text-transform: uppercase;
 }
-input.name::placeholder{
+
+input.name::placeholder {
     text-align: left;
 }
+
 select.input_field option:first {
     font-weight: 500;
     color: #d0d0d0;
@@ -595,9 +600,11 @@ select.input_field option:first {
     font-size: 16px;
     font-weight: 600;
 }
-input#number{
+
+input#number {
     padding-left: 82px !important;
 }
+
 /* accordion */
 .accordion_div {
     margin: 30px 0 0;
@@ -628,10 +635,12 @@ button.accordion-button {
 .accordion-button::after {
     background-image: url(../images/landing_page/arrow1.png);
 }
-.accordion-button:not(.collapsed)::after{
+
+.accordion-button:not(.collapsed)::after {
     background-image: url(../images/landing_page/arrow1.png);
 
 }
+
 /* .submit_div{
     background: url(../images/landing_page/btn_bg.png);
     width: 100%;
@@ -855,3 +864,264 @@ img.rsvp_bottom {
     font-size: 16px;
     font-weight: bold;
 }
+
+/* Start Pop up */
+
+.popup_row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.popup .p_top {
+    padding: 0;
+}
+
+.popup .p_top img {
+    /* width: 100%; */
+    width: 370px;
+    border-radius: 20px 20px 0 0;
+}
+
+.popup .p_middle {
+    background: url(../images/popup/middle_bg.webp);
+    width: 394px;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 25px 5px 5px;
+
+}
+
+.popup .p_middle .benessere_title {
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #092705;
+}
+.popup .p_middle .m_ticket {
+    position: absolute;
+    right: -5px;
+    margin: 0;
+    top: 35%;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000a8;
+    transform: rotate(270deg);
+}
+
+.popup .p_middle .rsvp_btn {
+    background: url(../images/popup/btn_bg.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 85%;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.popup .p_middle .rsvp_btn p {
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #4e4e4e;
+    letter-spacing: 2px;
+    padding: 14px;
+    text-transform: uppercase;
+}
+
+.popup .p_middle .qr_code {
+    width: 230px;
+}
+
+.popup .p_middle .qr_content p {
+    color: #1d331c;
+    font-weight: 600;
+    margin-bottom: 0px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.popup .p_middle .qr_content p span {
+    font-weight: 700;
+}
+
+p.white_patch {
+    color: #4e4e4e;
+    font-weight: 700;
+    margin-bottom: 0px;
+    font-size: 14px;
+    padding: 12px;
+    background: #fff;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.contact_div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: url(../images/popup/middle_bottom_bg.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 10px;
+    width: 370px;
+    margin: auto;
+}
+
+.contact_div p {
+    margin-bottom: 0;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    display: inline;
+    margin: 0px 10px;
+    text-transform: uppercase;
+}
+
+.contact_div .support {
+    width: 40px;
+    margin-bottom: 4px;
+}
+
+.border_btm {
+    border-bottom: 1px dashed #26242585;
+    width: 90%;
+}
+
+.p_bottom {
+    margin-top: 77px;
+    width: 370px;
+    border-radius: 0 0 20px 20px;
+    background: #1d331c;
+}
+
+.guest_div {
+    padding: 20px 10px;
+}
+
+.guest {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #3c523b;
+}
+
+.guest p {
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 0px;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 5px 10px
+}
+
+@media only screen and (max-width:380px) {
+    .popup .p_top img {
+        width: 350px;
+    }
+
+    .popup .p_middle .rsvp_btn p {
+        font-size: 13px;
+    }
+
+    .popup .p_middle {
+        height: 379px;
+        padding: 25px 0px 0;
+        margin-top: -1px;
+    }
+
+    .popup .p_middle .benessere_title {
+        font-size: 28px;
+        margin-top: -10px;
+    }
+
+    .popup .p_middle .qr_content p {
+        font-size: 13px;
+        margin-top: 5px;
+    }
+
+    .popup .p_middle .qr_code {
+        width: 220px;
+    }
+
+    p.white_patch {
+        font-size: 13px;
+    }
+
+    .contact_div {
+        background-size: contain;
+        width: 350px;
+        margin: -6px auto 0;
+    }
+
+    .contact_div p {
+        font-size: 16px;
+    }
+
+    .p_bottom {
+        margin-top: 55px;
+        width: 350px;
+    }
+
+    .guest p {
+        font-size: 13px;
+
+    }.popup .p_middle .m_ticket{
+        right: -15px;
+    }
+
+}
+
+@media only screen and (max-width:350px) {
+    .popup .p_top img {
+        width: 315px;
+    }
+
+    .popup .p_middle .rsvp_btn p {
+        font-size: 11px;
+        padding: 20px;
+    }
+
+    .popup .p_middle {
+        width: 315px;
+        height: 343px;
+    }
+
+    .popup .p_middle .qr_code {
+        width: 200px;
+    }
+
+    p.white_patch {
+        font-size: 12px;
+    }
+
+    .contact_div {
+        background-size: contain;
+        width: 315px;
+        margin: -10px auto 0;
+    }
+
+    .p_bottom {
+        margin-top: 65px;
+        width: 315px;
+    }
+}
+
+.support_detail_popup .modal-dialog {
+    margin: 0px;
+    background: #fff;
+}
+
+.modal-content {
+    border: none;
+}
+
+/* End Pop up */
