@@ -117,15 +117,22 @@
         </div>
 
         <!-- Modal -->
-        <div class="modal fade support_detail_popup" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-            aria-hidden="true" >
+        <div class="modal fade support_detail_popup" id="myModal" tabindex="-1" role="dialog"
+            aria-labelledby="myModalLabel" aria-hidden="true">
+
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
+
                     <div class="container-fluid popup">
                         <div class="row popup_row">
                             <!-- Top Section -->
                             <div class="col-sm-12 text-center position-relative p_top">
                                 <img class="top" src="assets/images/popup/top.webp" alt="">
+                                <!-- Close Button -->
+                                <button type="button" id="closeModal" class="close" data-dismiss="modal"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
                             <!-- Middle Section -->
                             <div class="col-sm-12 text-center position-relative p_middle">
@@ -183,6 +190,10 @@
             $(document).ready(function () {
                 $("#openModal").click(function () {
                     $("#myModal").modal("show");
+                });
+                // close Modal
+                $("#closeModal").click(function () {
+                    $("#myModal").modal("hide");
                 });
             });
         </script>
