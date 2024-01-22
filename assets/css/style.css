@@ -677,7 +677,8 @@ button.accordion-button {
 {
     background: url(../images/landing_page/submit.png);
     background-size: contain;
-    width: 150px;
+    width: 110px;
+    margin-top: 9px;
     background-repeat: no-repeat;
 }
 .rsvp_bottom_div {
@@ -1171,3 +1172,13 @@ button#closeModal {
 }
 
 /* End Pop up */
+
+.addBtn {
+    background: #b28e43;
+    border: none;
+    padding: 6px 20px;
+    transition: all 0.5s;
+}
+.addBtn:hover{
+    background: #8d6f2e;
+}
