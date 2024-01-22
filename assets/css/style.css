@@ -673,7 +673,13 @@ button.accordion-button {
     display: flex;
     justify-content: center;
 }
-
+#submitBtn
+{
+    background: url(../images/landing_page/submit.png);
+    background-size: contain;
+    width: 150px;
+    background-repeat: no-repeat;
+}
 .rsvp_bottom_div {
     padding: 0px;
     top: -70px;
@@ -1037,6 +1043,7 @@ p.white_patch {
 }
 
 /* 
+
 @media only screen and (max-width:380px) {
     .popup .p_top img {
         width: 350px;

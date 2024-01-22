@@ -164,19 +164,17 @@
                             placeholder="Mobile No. (To Send RSVP Confirmation TicketsVia WhatsApp)" required>
                         <input type="email" name="email" id="email" class="input_field" placeholder="E-mail ID"
                             required>
-                        <!-- <input type="text" class="input_field" placeholder="I am A - Investor/End-User/ Channel Partner"
-                            required> -->
-                        <select class="input_field" name="user_type" required>
+                        <!-- <select class="input_field" name="user_type" required>
                             <option value="" disabled selected>I am A - Investor/End-User/ Channel Partner</option>
                             <option value="investor">Investor</option>
                             <option value="end_user">End User</option>
                             <option value="channel_partner">Channel Partner</option>
-                        </select>
+                        </select> -->
                         <div class="form_para">
                             <p>(Request to kindly note that <br>each invitation is limited to a total of 4 guests)
                             </p>
                         </div>
-                        <div class="accordion_div">
+                        <!-- <div class="accordion_div">
                             <div class="accordion accordion-flush" id="accordionFlushExample">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="flush-headingOne">
@@ -203,8 +201,6 @@
                                                 required>
                                             <input type="email" name="email" id="email" class="input_field"
                                                 placeholder="E-mail ID" required>
-                                            <!-- <input type="text" class="input_field" placeholder="I am A - Investor/End-User/ Channel Partner"
-                                            required> -->
                                             <select class="input_field" name="user_type" required>
                                                 <option value="" disabled selected>I am A - Investor/End-User/ Channel
                                                     Partner</option>
@@ -240,8 +236,6 @@
                                                 required>
                                             <input type="email" name="email" id="email" class="input_field"
                                                 placeholder="E-mail ID" required>
-                                            <!-- <input type="text" class="input_field" placeholder="I am A - Investor/End-User/ Channel Partner"
-                                            required> -->
                                             <select class="input_field" name="user_type" required>
                                                 <option value="" disabled selected>I am A - Investor/End-User/ Channel
                                                     Partner</option>
@@ -277,8 +271,6 @@
                                                 required>
                                             <input type="email" name="email" id="email" class="input_field"
                                                 placeholder="E-mail ID" required>
-                                            <!-- <input type="text" class="input_field" placeholder="I am A - Investor/End-User/ Channel Partner"
-                                            required> -->
                                             <select class="input_field" name="user_type" required>
                                                 <option value="" disabled selected>I am A - Investor/End-User/ Channel
                                                     Partner</option>
@@ -290,12 +282,13 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="d-flex justify-content-center w-100"
                             style="position: absolute;bottom: -25px;left: 0;;">
                             <div class="submit_div">
-                                <img class="submit" id="submitBtn" src="assets/images/landing_page/submit.png"
-                                    alt="rsvp_now">
+                                <input type="submit" class="submit" id="submitBtn" value="">
+                                <!-- <img class="submit" id="submitBtn" src="assets/images/landing_page/submit.png"
+                                    alt="rsvp_now"> -->
                             </div>
                         </div>
                         <img class="rightLeaf" src="assets/images/BlackGoldLeavesRight.png" />
@@ -329,7 +322,7 @@
         });
     </script>
     <!-- On Submit Redirect to next page -->
-    <script>
+    <!-- <script>
         $(document).ready(function () {
 
             // Add click event listener to the submit button
@@ -337,7 +330,68 @@
                 window.location.href = "thankyou.html";
             });
         });
+    </script> -->
+
+
+    <!-- Form Submititon -->
+    <script>
+        const form = document.querySelector('#form');
+        if (form) {
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                try {
+                    const formData = new FormData(form);
+                    formData.append('event_id', 2);
+
+
+                    const name = formData.get('name');
+                    const email = formData.get('email');
+                    // const user_type = formData.get('user_type');
+
+                    // Get country_code and number values
+                    const countryCode = formData.get('country_code');
+                    const number = formData.get('number');
+                    // Concatenate country_code and number into a single string
+                    const combinedNumber = countryCode + number;
+
+                    // Replace the individual country_code and number values with the combined one
+                    formData.set('phone', combinedNumber);
+                    formData.delete('country_code');
+                    formData.delete('number');
+
+                    formData.forEach((value, key) => {
+                        console.log(`${key}: ${value}`);
+                    });
+
+                    let url = 'https://partnerinai.in/hex-event/addUsers';
+
+                    const postData = await fetch(url, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                    });
+
+                    const response = await postData.json();
+
+                    if (response.success) {
+                        alert(response.message);
+                    } else {
+                        let message = '';
+                        Object.values(response.message).forEach((e) => {
+                            message += e + '\n';
+                        });
+                        alert(message);
+                    }
+                } catch (error) {
+                    console.log(error);
+                    // alert(error.message)
+                }
+            });
+        }
     </script>
+
 </body>
 
 </html>
